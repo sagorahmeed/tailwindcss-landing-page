@@ -1,0 +1,46 @@
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antiliased text-gray-800 bg-white dark:bg-gray-800 dark:text-gray-100">
+  <div class="flex justify-center items-center space-x-2 mt-10">
+    <span class="text-sm text-gray-800 dark:text-white">Light</span>
+    <div class="">
+      <input type="checkbox" name="" id="toggle" class="hidden"  />
+      <label for="toggle" class="cursor-pointer">
+      <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1">
+        <div class="toggle-dot h-4 w-4 bg-white rounded-full shadow-md transform trasition duration-300 each-in-out">
+
+        </div>
+      </div>
+    </label>
+    </div>
+    <span class="text-sm text-gray-800 dark:text-white">Dark</span>
+  </div>
+   <div class="bg-blue-100 dark:bg-white dark:text-gray-100 max-w-sm m-auto mt-10 rounded-lg">
+      <div class="max-w-sm m-auto px-3 py-3">
+        <img class="w-full rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTolu6NA6EgVaBNz4M_EdZMBV3RRZQMrCag&usqp=CAU" alt="">
+        <h2 class="text-gray-700 m-0 pt-4 text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+        <p class="text-gray-600 font-normal text-md m-0 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, laborum deleniti.!</p>
+        <button class="bg-yellow-400 dark:bg-black dark:text-white text-gray-50 py-2 px-6 rounded-md font-bold hover:bg-yellow-500 trasition duration-300 each-in-out dark:hover:text-yellow-400">Submit</button>
+      </div>
+   </div>
+   <script>
+     const checkbox = document.querySelector("#toggle");
+     const html = document.querySelector("html");
+     const toggleDarkMode = function(){
+       checkbox.checked
+       ? html.classList.add("dark")
+       : html.classList.remove("dark");
+     }
+     toggleDarkMode();
+     checkbox.addEventListener("click", toggleDarkMode);
+   </script>
+</body>
+</html>
